@@ -1,0 +1,15 @@
+.image-comp {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 650px;
+	// width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	h2 {
+			color: #fff;
+			font-size: 50px;
+	}
+}

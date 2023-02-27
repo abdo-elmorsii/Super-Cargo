@@ -1,0 +1,7 @@
+$main_color: #2F3988;
+
+@mixin center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
