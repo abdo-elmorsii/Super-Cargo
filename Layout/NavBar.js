@@ -1,10 +1,11 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { AiOutlineMenu } from "react-icons/ai";
 const NavBar = () => {
-  const [navstate, setNavState] = useState(false);
+  const [navState, setNavState] = useState(false);
 
   return (
     <header className="header">
@@ -24,7 +25,7 @@ const NavBar = () => {
 
           <div
             onClick={() => {
-              setNavState(!navstate), console.log(navstate);
+              setNavState((prev)=> !prev )
             }}
             className="menu"
           >
@@ -50,7 +51,7 @@ const NavBar = () => {
         </Nav>
       </Navbar>
 
-      <div className={navstate ? "toggle-bar toggle-animation" : "toggle-bar"}>
+      <div className={navState ? "toggle-bar toggle-animation" : "toggle-bar"}>
         <ul className="toggle-url">
           <li>Home</li>
           <li>About</li>
