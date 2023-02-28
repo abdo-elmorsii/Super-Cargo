@@ -1,6 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
 import Image from "next/image";
+// import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+
+
 import { Inter } from "@next/font/google";
 import SimpleSlider from "@/components/Slider";
 import { Container } from "react-bootstrap";
@@ -80,7 +83,7 @@ export default function Home() {
             <Card bgColor={"#51CFED"} icon={<FaUsers color='#fff' fontSize={30}/>} number={"1200"} title={"Happy Users"}/>
 			     </div>
 			    </div>
-			      </Container>
+			  </Container>
         <Container className='third-section'>
 			
 
@@ -122,3 +125,13 @@ export default function Home() {
     </>
   );
 }
+
+
+// export  async function getServerSideProps({ locale }) {
+//   return {
+//     props: {
+// 			locale: locale,
+//       ...(await serverSideTranslations(locale, ["home", "common"])),
+//     },
+//   };
+// }

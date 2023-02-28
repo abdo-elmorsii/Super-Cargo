@@ -1,11 +1,18 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { AiOutlineMenu } from "react-icons/ai";
+
+
 const NavBar = () => {
   const [navState, setNavState] = useState(false);
+
+  const {pathname} = useRouter();
+
+  
 
   return (
     <header className="header">
@@ -19,9 +26,14 @@ const NavBar = () => {
         }}
       >
         <div className="heade">
-          <Navbar.Brand href="#home">
-            <img src="/assets/logo.png" className="logo" alt="logo" />
-          </Navbar.Brand>
+          
+            <div >
+              <Link href="/">
+                <img src="/assets/logo.png" className="logo" alt="logo" />
+              </Link>
+            </div>
+            
+          
 
           <div
             onClick={() => {
@@ -33,30 +45,46 @@ const NavBar = () => {
           </div>
         </div>
         <Nav className="linkss">
-          <Nav.Link href="#home" className="link">
-            <Link href="/">Home</Link>
-          </Nav.Link>
-          <Nav.Link href="#features" className="link">
-            <Link href="/about">About</Link>
-          </Nav.Link>
-          <Nav.Link href="#pricing" className="link">
-            <Link href="/services">Services</Link>
-          </Nav.Link>
-          <Nav.Link href="#pricing" className="link">
-            <Link href="/contact">Contact</Link>
-          </Nav.Link>
-          <Nav.Link href="#pricing" className="link">
-            <Link href="/contact">0494875757</Link>
-          </Nav.Link>
+          <ul className="nav-links">
+            
+            <li >
+              <Link href="/" className={pathname === "/" ? "active" : null}>Home</Link>
+            </li>
+            <li>
+              <Link href="/about" className={pathname === "/about" ? "active" : null}>About</Link>
+            </li>
+            <li>
+              <Link href="/services" className={pathname === "/services" ? "active" : null}>Services</Link>
+              </li>
+            <li>
+              <Link href="/contact" className={pathname === "/contact" ? "active" : null}>Contact</Link>
+            </li>
+            <li>
+              <p>0494875757</p>
+            </li>
+          </ul>
+         
         </Nav>
       </Navbar>
 
       <div className={navState ? "toggle-bar toggle-animation" : "toggle-bar"}>
-        <ul className="toggle-url">
-          <li>Home</li>
-          <li>About</li>
-          <li>Services</li>
-          <li>Contact</li>
+        <ul className="toggle-url nav-links">
+             <li >
+              <Link href="/" className={pathname === "/" ? "active" : null}>Home</Link>
+            </li>
+            <li>
+              <Link href="/about" className={pathname === "/about" ? "active" : null}>About</Link>
+            </li>
+            <li>
+              <Link href="/services" className={pathname === "/services" ? "active" : null}>Services</Link>
+              </li>
+            <li>
+              <Link href="/contact" className={pathname === "/contact" ? "active" : null}>Contact</Link>
+            </li>
+            <li>
+              <p>0494875757</p>
+            </li>
+         
         </ul>
       </div>
     </header>

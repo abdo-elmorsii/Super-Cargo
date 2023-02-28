@@ -1,20 +1,37 @@
 .slider {
   min-height: fit-content;
-  width: 99vw;
+  width: 100vw;
   margin: auto;
+  
+  .slick-arrow {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(221, 221, 221, 0.219);
+
+
+    @media screen and (max-width:767px) {
+      display: none !important;
+
+    }
+  }
+
+  .slick-next {
+    right: 20px !important;
+    top: 50%;
+    
+  }
+  .slick-prev {
+    left: 20px !important;
+    top: 50%;
+    z-index: 44;
+  }
 }
-.slick-next {
-  right: 0 !important;
-  top: 33%;
-  background-color: red 1px solid !important;
-  z-index: 44;
-}
-.slick-prev {
-  left: 0 !important;
-  top: 33%;
-  background-color: red 1px solid !important;
-  z-index: 44;
-}
+
 .image-and-words {
   position: relative;
   .words {
