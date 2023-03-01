@@ -9,20 +9,23 @@ export default function SimpleSlider() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed:3000
   };
   return (
     <div className="slider">
       <Slider {...settings}>
-      <div className="image-and-words">
+        <div className="image-and-words">
           <img src="../assets/Ship.jpg" style={{ width: "100%" }} />
           <div className="words">
             <h3></h3>
             <h1 className="words-size">
-              #Place For Your <span style={{color:"blue"}}>Transport</span> Solutions
+              #Place For Your <span style={{ color: "#88f" }}>Transport</span>{" "}
+              Solutions
             </h1>
             <div className="More-Info">
-                <button className="Read">Read More</button>
-                <button className="Free">Free Quote</button>
+              <button className="Read">Read More</button>
+              <button className="Free">Free Quote</button>
             </div>
           </div>
         </div>
@@ -31,11 +34,12 @@ export default function SimpleSlider() {
           <div className="words">
             <h3></h3>
             <h1 className="words-size">
-              #Place For Your <span style={{color:"blue"}}>Logictics</span> Solutions
+              #Place For Your <span style={{ color: "#88F" }}>Logictics</span>{" "}
+              Solutions
             </h1>
             <div className="More-Info">
-                <button className="Read">Read More</button>
-                <button className="Free">Free Quote</button>
+              <button className="Read">Read More</button>
+              <button className="Free">Free Quote</button>
             </div>
           </div>
         </div>

@@ -30,7 +30,7 @@
   }
 }
 .Read {
-  background-color: rgb(52, 52, 198);
+  background-color: rgb(68, 68, 215);
   color: white;
   padding: 10px 15px;
   margin-right: 15px;
@@ -44,9 +44,9 @@
   border: none;
   outline: none;
 }
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 850px) {
   .words > * {
-    font-size: 70px;
+    font-size: 60px;
   }
   .Read {
     font-size: 20px;
@@ -62,4 +62,9 @@
     left: 13% !important;
     width: 50% !important;
   }
+}
+.service-container{
+    border:1px solid red;
+    width: 70%;
+    margin: auto;
 }

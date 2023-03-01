@@ -7,7 +7,10 @@ const NavBar = () => {
   const [navstate, setNavState] = useState(false);
 
   return (
-    <header className="header">
+    <header
+      className="header"
+      style={{ position: "fixed", top: 0, left: 0, right: 0 ,zIndex:99999}}
+    >
       <Navbar
         bg="light"
         variant="light"

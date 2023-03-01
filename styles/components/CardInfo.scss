@@ -1,0 +1,63 @@
+.card-info {
+  width: 400px;
+  height: 400px;
+  margin: 0;
+  box-shadow: 0 0 45px rgb(0 0 0 / 7%);
+  border: none !important;
+  .image-container {
+    overflow: hidden;
+    img {
+      transition: all 0.3s;
+    }
+  }
+  &:hover .image-container img {
+    transform: scale(1.1);
+  }
+  &:hover .Readd {
+    left: 20px;
+  }
+}
+.cards-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+.Readmore {
+  width: 140px;
+  color: black;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  p {
+    border: 1px solid gray;
+  }
+  .Readd {
+    position: absolute;
+    left: -100px;
+    top: 0;
+    height: 100%;
+    width: 87%;
+    padding: 10px;
+    padding-left: 25px;
+    display: flex;
+    align-items: center;
+    transition: all 0.4s;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: #313a8c;
+    color: white;
+    cursor: pointer;
+  }
+  
+}
+.arrow {
+  width: fit-content;
+  padding: 10px 13px;
+  background-color: #313a8c;
+  color: white;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  z-index: 55;
+}
