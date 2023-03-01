@@ -1,9 +1,9 @@
 import React from "react";
-
+import { TiTick } from "react-icons/ti";
 const PriceDetails = ({ title, price }) => {
   return (
-    <div>
-      <h2>{title}</h2>
+    <div className="price-div card-info">
+      <h4 style={{ color: "#374e71", margin: "15px" }}>{title}</h4>
       <div className="price-details">
         <h1>{price}</h1>
         <span>/ Month</span>
@@ -11,19 +11,27 @@ const PriceDetails = ({ title, price }) => {
       <hr></hr>
       <div className="web-info">
         <div>
-          <h3>HTML & CSS3</h3>
+          <TiTick className="icon-tik" />
+          <h5>HTML & CSS3</h5>
         </div>
         <div>
-          <h3>Bootstrap v5</h3>
+          <TiTick className="icon-tik" />
+
+          <h5>Bootstrap v5</h5>
         </div>
         <div>
-          <h3>FontAwesome Icons</h3>
+          <TiTick className="icon-tik" />
+
+          <h5>FontAwesome Icons</h5>
         </div>
         <div>
-          <h3>Responsive Layout</h3>
+          <TiTick className="icon-tik" />
+
+          <h5>Responsive Layout</h5>
         </div>
         <div>
-          <h3>Cross-browser Support</h3>
+          <TiTick className="icon-tik" />
+          <h5>Cross-browser Support</h5>
         </div>
       </div>
     </div>

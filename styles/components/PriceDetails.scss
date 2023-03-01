@@ -1,0 +1,22 @@
+.price-div {
+  width: 400px;
+  margin-top: 30px;
+  .price-details {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+  }
+}
+.web-info {
+  div {
+    display: flex;
+    align-items: center;
+    .icon-tik {
+      color: green;
+    }
+  }
+  h5 {
+    color: #555;
+    margin-left: 15px;
+  }
+}
