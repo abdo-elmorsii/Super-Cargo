@@ -22,11 +22,12 @@ export default function SimpleSlider() {
           <div className="words">
             <h3></h3>
             <h1 className="words-size">
-              #Place For Your <span style={{color:"blue"}}>Transport</span> Solutions
+              #Place For Your <span style={{ color: "#88f" }}>Transport</span>{" "}
+              Solutions
             </h1>
             <div className="More-Info">
-                <button className="Read">Read More</button>
-                <button className="Free">Free Quote</button>
+              <button className="Read">Read More</button>
+              <button className="Free">Free Quote</button>
             </div>
           </div>
         </div>
@@ -38,8 +39,8 @@ export default function SimpleSlider() {
               #Place For Your <span style={{color:"blue"}}>Logistics</span> Solutions
             </h1>
             <div className="More-Info">
-                <button className="Read">Read More</button>
-                <button className="Free">Free Quote</button>
+              <button className="Read">Read More</button>
+              <button className="Free">Free Quote</button>
             </div>
           </div>
         </div>
