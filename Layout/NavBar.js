@@ -73,7 +73,7 @@ const NavBar = () => {
       <div className={navState ? "toggle-bar toggle-animation" : "toggle-bar"}>
         <ul className="toggle-url nav-links">
              <li >
-              <Link href="/" className={pathname === "/" ? "active" : null}>Home</Link>
+              <Link href="/" className={pathname === "/" ? "active" : null} style={{padding:"0"}}>Home</Link>
             </li>
             <li>
               <Link href="/about" className={pathname === "/about" ? "active" : null}>About</Link>

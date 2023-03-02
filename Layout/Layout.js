@@ -1,12 +1,54 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "./Footer";
 import NavBar from "./NavBar";
-
+import { AiOutlineArrowUp } from "react-icons/ai";
 const Layout = ({ children }) => {
+  const [arrow, setarrow] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (pageYOffset > 1000) {
+        setarrow(true);
+      } else setarrow(false);
+    });
+  });
+  const func = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'auto'
+    });
+  };
   return (
-    <div>
-      <NavBar />
+    <div
+      style={{
+        minHeight: "100vh",
+        border: "1px solid green",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+        position: "relative",
+      }}
+    >
+      <div>
+        <NavBar />
+      </div>
       {children}
+      {arrow && (
+        <button
+          onClick={func}
+          className="btn"
+          style={{
+            position: "fixed",
+            zIndex: "855754",
+            bottom: "10%",
+            right: "5%",
+            backgroundColor: "#454a81",
+            color: "white",
+          }}
+        >
+          <AiOutlineArrowUp />
+        </button>
+      )}
       <Footer />
     </div>
   );

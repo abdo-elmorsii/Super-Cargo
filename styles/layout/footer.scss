@@ -1,9 +1,60 @@
 .footer {
-	background-image: url("../../public/map.png");
-	// height: 500px;
-  background-size: cover;
+  padding-top: 15px;
+  background-image: url("../../public/assets/map.jpg");
+  min-height: 400px;
+  background-size: 100%;
+  background-color: #060214;
   background-repeat: no-repeat;
-	.row-footer{
-      margin: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.map {
+  width: 100%;
+}
+ul{
+	padding: 0;
+}
+.row-footer {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.row-footer > * {
+  color: white;
+}
+
+.mapp {
+  margin: 0 !important;
+}
+.colheight {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.pages {
+  border: 1px solid yellow;
+  padding-left: 100px;
+  height: 100%;
+}
+.link{
+	color:white !important;
+	&:hover{
+		color: #947fe2 !important;
 	}
+}
+hr{
+  display: none;
+}
+ul{
+  padding: 0 !important;
+}
+@media screen and (max-width:765px) {
+  hr{
+    display: block;
+    margin-top: 10px !important;
+  }
 }

@@ -16,7 +16,6 @@
 
     @media screen and (max-width:767px) {
       display: none !important;
-
     }
   }
 
@@ -29,6 +28,9 @@
     left: 20px !important;
     top: 50%;
     z-index: 44;
+  }
+  @media screen and (max-width:767px) {
+    margin-top: 80px;
   }
 }
 

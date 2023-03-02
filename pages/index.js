@@ -29,7 +29,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="home">
+      <main className="home" >
         {/* slider */}
         <SimpleSlider />
         <div className="container cards-flex">
@@ -56,12 +56,26 @@ export default function Home() {
             className
           />
         </div>
+        <h4
+          style={{ textAlign: "center", marginTop: "20px", color: "#51CFED " }}
+        >
+         Pricing Plane
+        </h4>
+
+        <h1 style={{ textAlign: "center", marginTop: "20px" }}>
+          Pefrect Pricing Plane
+        </h1>
         <div className="container cards-flex">
           <PriceDetails title="Basic Plane" price="$ 49.00" />
           <PriceDetails title="Basic Plane" price="$ 49.00" />
           <PriceDetails title="Basic Plane" price="$ 49.00" />
         </div>
-        <h4 style={{ textAlign: "center", marginTop: "20px",color:"#51CFED " }}>Testominal</h4>
+      
+        <h4
+          style={{ textAlign: "center", marginTop: "20px", color: "#51CFED " }}
+        >
+          Testominal
+        </h4>
 
         <h1 style={{ textAlign: "center", marginTop: "20px" }}>
           Our Clients Say!
