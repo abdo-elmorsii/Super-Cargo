@@ -112,6 +112,7 @@ const Admin = () => {
         "Loading"
       ) : (
         <div>
+          <h2>Admin Page</h2>
           <button type="button" className="btn btn-outline-dark" onClick={out}>
             signout
           </button>
