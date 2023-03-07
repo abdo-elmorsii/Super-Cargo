@@ -7,11 +7,10 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "@/firebase/firebase";
 import { signOut } from "firebase/auth";
 import { db } from "@/firebase/firebase";
-import Table from "react-bootstrap/Table";
+// import Table from "react-bootstrap/Table";
 import {
   ref,
-  uploadBytes,
-  listAll,
+  
   getDownloadURL,
   uploadBytesResumable,
 } from "firebase/storage";
@@ -21,12 +20,13 @@ import {
   query,
   collection,
   onSnapshot,
-  QuerySnapshot,
+
   addDoc,
 } from "firebase/firestore";
-import { images } from "@/next.config";
-import { async } from "@firebase/util";
+
 import Table1 from "@/components/Table";
+
+
 const Admin = () => {
   const [upload, setuploadimage] = useState(null);
   const [mydata, setmydata] = useState([]);
