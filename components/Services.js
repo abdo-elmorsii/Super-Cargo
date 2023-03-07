@@ -1,12 +1,12 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from "react";
 import {
   query,
   collection,
   onSnapshot,
-  QuerySnapshot,
-  addDoc,
+  
 } from "firebase/firestore";
-import { auth } from "@/firebase/firebase";
+// import { auth } from "@/firebase/firebase";
 import { db } from "@/firebase/firebase";
 
 const ServicesCom = () => {
@@ -21,17 +21,18 @@ const ServicesCom = () => {
       setmydata([...dataarr]);
       console.log(mydata);
     });
-  }, []);
+  }, [mydata]);
   return (
     <div className="services-container">
       {mydata.length > 0 ? (
-        mydata.map((item) => {
+        mydata.map((item, index) => {
           return (
-            <div className="service-item-con d-flex align-items-center">
+            <div className="service-item-con d-flex align-items-center" key={index}>
               <div style={{ marginRight: "30px" }}>
                 <img
                   src={item.img}
                   style={{ objectFit: "contain", width: "150px" }}
+                  alt="contant"
                 />
               </div>
               <div>

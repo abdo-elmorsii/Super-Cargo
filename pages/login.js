@@ -1,17 +1,17 @@
-import React, { useContext, useEffect, useState } from "react";
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable jsx-a11y/alt-text */
+import React, { useContext, useState } from "react";
 import {
   signInWithEmailAndPassword,
-  onAuthStateChanged,
-  signOut,
-  createUserWithEmailAndPassword,
+  
 } from "firebase/auth";
-import Router, { useRouter } from "next/router";
+import  { useRouter } from "next/router";
 import { mcontext } from "@/context/context";
 import { auth } from "@/firebase/firebase";
 const Login = () => {
   const [email, setemail] = useState();
   const [password, setpassword] = useState();
-  const { id, setuser, user } = useContext(mcontext);
+  const {  setuser } = useContext(mcontext);
   const router = useRouter();
 
   const handlefun = (e) => {
@@ -19,7 +19,7 @@ const Login = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((user) => {
         setuser(user);
-        Router.push("/admin")
+        router.push("/admin")
       })
       .catch((err) => console.log(err));
   };

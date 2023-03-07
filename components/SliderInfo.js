@@ -1,10 +1,11 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 
 const SliderInfo = ({ img }) => {
   return (
     <div className="sliderinfo">
       <div className="person-info">
-        <img src={img} style={{ width: "90px", height: "90px" }} />
+        <img src={img} style={{ width: "90px", height: "90px" }} alt="slider"/>
         <div>
           <h3>Client Name</h3>
           <h4>Profession</h4>

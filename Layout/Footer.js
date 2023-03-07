@@ -12,8 +12,8 @@ const Footer = () => {
   return (
     <footer className="footer">
       <Row className="row-footer ">
-        <Col sm={12} md={6} lg={5} className="colheight">
-          <div className="info-company colheight">
+        <Col sm={12} md={6} lg={5} className="col-height">
+          <div className="info-company col-height">
             <h2>Address</h2>
             <div>
               <MdLocationOn /> &nbsp;
@@ -49,9 +49,9 @@ const Footer = () => {
           </div>
         </Col>
         <hr className="line" />
-        <Col sm={12} md={6} lg={3} className="colheight">
+        <Col sm={12} md={6} lg={3} className="col-height">
           <div style={{ height: "100%" }}>
-            <ul className="colheight ">
+            <ul className="col-height ">
               <li style={{ fontSize: "22px", fontWeight: "600" }}>
                 Some Quick Links
               </li>
@@ -71,7 +71,7 @@ const Footer = () => {
           </div>
         </Col>
         <hr className="line" />
-        <Col className="mapp colheight" sm={12} md={6} lg={4}>
+        <Col className="mapp col-height" sm={12} md={6} lg={4}>
           <div className="map">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3455.8375027154225!2d31.31748099152631!3d29.984099657756257!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x35b0bda415fdbe15!2sCarrefour%20-%20Maadi%20City%20Center!5e0!3m2!1sen!2seg!4v1672652261910!5m2!1sen!2seg"

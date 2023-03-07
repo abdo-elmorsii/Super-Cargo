@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from "react";
 import { useContext } from "react";
 import { mcontext } from "@/context/context";
@@ -7,18 +8,11 @@ import { auth } from "@/firebase/firebase";
 import { signOut } from "firebase/auth";
 import { db } from "@/firebase/firebase";
 
-import {
-  ref,
-
-  getDownloadURL,
-  uploadBytesResumable,
-} from "firebase/storage";
+import { ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
 import { v4 } from "uuid";
 import { storage } from "@/firebase/firebase";
 import {
- 
   collection,
-
   addDoc,
   deleteDoc,
   doc,
@@ -98,7 +92,6 @@ const Admin = () => {
           getProducts();
         });
       });
-     
     }
   };
 
@@ -114,7 +107,7 @@ const Admin = () => {
         setuser(user1);
       } else Router.push("login");
     });
-  }, []);
+  }, [Router, setuser]);
   const Router = useRouter();
   const out = () => {
     signOut(auth)
@@ -142,7 +135,7 @@ const Admin = () => {
               </div>
             );
           })} */}
-          <img src={upload} />
+          <img src={upload} alt="upload" />
           <Row>
             <Col sm={8} lg={4} md={6} style={{ margin: "auto" }} xs={8}>
               {" "}

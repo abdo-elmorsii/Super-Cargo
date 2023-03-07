@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
-import Image from "next/image";
+// import Image from "next/image";
 // import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import { Inter } from "@next/font/google";
@@ -16,7 +16,7 @@ import Button from "@/components/Button";
 import Card from "@/components/Card";
 import CardInfo from "@/components/CardInfo";
 import PriceDetails from "@/components/PriceDetails";
-import SliderInfo from "@/components/SliderInfo";
+// import SliderInfo from "@/components/SliderInfo";
 import SliderPerson from "@/components/SliderPersons";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -74,7 +74,7 @@ export default function Home() {
         <h4
           style={{ textAlign: "center", marginTop: "20px", color: "#51CFED " }}
         >
-          Testominal
+          Testimonial
         </h4>
 
         <h1 style={{ textAlign: "center", marginTop: "20px" }}>

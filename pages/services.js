@@ -1,6 +1,6 @@
 
-import ServicesCom from "@/components/Services";
 import React from "react";
+import ServicesCom from "@/components/Services";
 
 const Services = () => {
 	
