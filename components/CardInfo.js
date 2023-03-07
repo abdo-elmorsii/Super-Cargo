@@ -1,10 +1,11 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { HiOutlineArrowRight } from "react-icons/hi";
 const CardInfo = ({ image, title }) => {
   return (
     <div class="card card-info">
       <div className="image-container">
-        <img src={image} class="card-img-top" alt="..." />
+        <img src={image} class="card-img-top" alt="card" />
       </div>
       <div class="card-body">
         <h5 class="card-title">{title}</h5>

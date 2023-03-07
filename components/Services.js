@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from "react";
 import {
   query,
@@ -20,7 +21,7 @@ const ServicesCom = () => {
       setmydata([...dataarr]);
       console.log(mydata);
     });
-  }, []);
+  }, [mydata]);
   return (
     <div className="services-container">
       {mydata.length > 0 ? (
@@ -31,6 +32,7 @@ const ServicesCom = () => {
                 <img
                   src={item.img}
                   style={{ objectFit: "contain", width: "150px" }}
+                  alt="contant"
                 />
               </div>
               <div>
