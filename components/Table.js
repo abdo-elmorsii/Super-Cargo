@@ -3,8 +3,9 @@ import ReactDOM from "react-dom";
 import DataTable from "react-data-table-component";
 // import DataTableExtensions from "react-data-table-component-extensions";
 import "react-data-table-component-extensions/dist/index.css";
+import { RiDeleteBin7Fill } from "react-icons/ri";
 
-function Table({ arr }) {
+function Table({ arr, deletefun }) {
   const columns = [
     {
       name: "Cubic",
@@ -26,6 +27,15 @@ function Table({ arr }) {
       selector: "height",
       sortable: true,
     },
+    {
+      name: "Title",
+      selector: "title",
+      sortable: true,
+    },
+    {
+      selector: "delete",
+      sortable: true,
+    },
   ];
 
   const data = arr.map((item) => {
@@ -34,8 +44,20 @@ function Table({ arr }) {
       length: item.length,
       width: item.width,
       height: item.height,
+      title: item.title,
+      id: item.id,  
+      delete: (
+        <RiDeleteBin7Fill
+          style={{ cursor: "pointer" }}
+          onClick={() => {
+            deletefun(item.id);
+          }}
+        />
+      ),
     };
   });
+
+  console.log(data);
 
   return (
     <div className="main">

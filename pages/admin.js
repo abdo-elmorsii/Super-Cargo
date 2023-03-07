@@ -7,37 +7,41 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "@/firebase/firebase";
 import { signOut } from "firebase/auth";
 import { db } from "@/firebase/firebase";
-// import Table from "react-bootstrap/Table";
-import {
-  ref,
-  
-  getDownloadURL,
-  uploadBytesResumable,
-} from "firebase/storage";
+
+import { ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
 import { v4 } from "uuid";
 import { storage } from "@/firebase/firebase";
 import {
-  query,
   collection,
-  onSnapshot,
-
   addDoc,
+  deleteDoc,
+  doc,
+  getDocs,
 } from "firebase/firestore";
 
 import Table1 from "@/components/Table";
-
-
+import { Button, Col, Container, Row } from "react-bootstrap";
 const Admin = () => {
   const [upload, setuploadimage] = useState(null);
   const [mydata, setmydata] = useState([]);
   const [myimage, setimage] = useState("");
+  const Router = useRouter();
   const { setuser, user } = useContext(mcontext);
   const [data, setdata] = useState({
     height: "",
     width: "",
     length: "",
     cubic: "",
+    title: "",
   });
+
+  const deletefun = async (ids) => {
+    const newarr = mydata.filter((item) => {
+      return item.id !== ids;
+    });
+    setmydata([...newarr]);
+    await deleteDoc(doc(db, "data", ids));
+  };
 
   const uploadd = (e) => {
     setimage(e.target.files[0]);
@@ -53,6 +57,19 @@ const Admin = () => {
 
   // console.log(myimage);
 
+  const getProducts = async () => {
+    try {
+      const docSnap = await getDocs(collection(db, "data"));
+
+      console.log(
+        "items",
+        docSnap.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
+      );
+      setmydata(docSnap.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    } catch (e) {
+      console.log("get errors:", e);
+    }
+  };
   const createdata = async (e) => {
     e.preventDefault();
     if (
@@ -71,24 +88,21 @@ const Admin = () => {
             length: +data.length,
             cubic: +data.cubic,
             img: url,
+            title: data.title,
           });
+          getProducts();
         });
       });
     }
   };
 
+  // });
   useEffect(() => {
-    const q = query(collection(db, "data"));
-    const unsubscribe = onSnapshot(q, (querySnapshot) => {
-      let dataarr = [];
-      querySnapshot.forEach((doc, index) => {
-        dataarr.push({ ...doc.data(), id: doc.id[index] });
-      });
-      setmydata([...dataarr]);
-      console.log(mydata);
-    });
-  }, [mydata]);
+    getProducts();
+  }, []);
+  // console.log(mydata);
 
+  
   useEffect(() => {
     onAuthStateChanged(auth, (user1) => {
       if (user1) {
@@ -96,7 +110,6 @@ const Admin = () => {
       } else Router.push("login");
     });
   }, [Router, setuser]);
-  const Router = useRouter();
   const out = () => {
     signOut(auth)
       .then(() => {
@@ -111,8 +124,8 @@ const Admin = () => {
       {!user ? (
         "Loading"
       ) : (
-        <div>
-          <h2>Admin Page</h2>
+        <Container style={{ marginTop: "20px" }}>
+          <h2 style={{ textAlign: "center" }}>Admin Page</h2>
           <button type="button" className="btn btn-outline-dark" onClick={out}>
             signout
           </button>
@@ -123,51 +136,73 @@ const Admin = () => {
               </div>
             );
           })} */}
-          <img src={upload}  alt="user"/>
-          <form onSubmit={createdata}>
-            <input
-              type="file"
-              placeholder="Add image"
-              onChange={(e) => {
-                uploadd(e);
-              }}
-            />{" "}
-            <label>Height:</label>
-            <input
-              onChange={(e) => {
-                addinfo(e);
-              }}
-              name="height"
-              required={true}
-            />
-            <label>Length:</label>
-            <input
-              onChange={(e) => {
-                addinfo(e);
-              }}
-              name="length"
-              required={true}
-            />
-            <label>Width:</label>
-            <input
-              onChange={(e) => {
-                addinfo(e);
-              }}
-              name="width"
-              required={true}
-            />{" "}
-            <label>Cubic</label>
-            <input
-              onChange={(e) => {
-                addinfo(e);
-              }}
-              name="cubic"
-              required
-            />
-            <button type="submit">Add data to firebase</button>
-          </form>
-          <Table1 arr={mydata} />
-        </div>
+          <img src={upload} alt="upload" />
+          <Row>
+            <Col sm={8} lg={4} md={6} style={{ margin: "auto" }} xs={8}>
+              {" "}
+              <form onSubmit={createdata}>
+                <div className="formdataa">
+                  <input
+                    type="file"
+                    placeholder="Add image"
+                    onChange={(e) => {
+                      uploadd(e);
+                    }}
+                  />{" "}
+                  <label>Title:</label>
+                  <input
+                    onChange={(e) => {
+                      addinfo(e);
+                    }}
+                    name="title"
+                    required={true}
+                    type="text"
+                  />
+                  <label>Height:</label>
+                  <input
+                    onChange={(e) => {
+                      addinfo(e);
+                    }}
+                    name="height"
+                    required={true}
+                  />
+                  <label>Length:</label>
+                  <input
+                    onChange={(e) => {
+                      addinfo(e);
+                    }}
+                    name="length"
+                    required={true}
+                  />
+                  <label>Width:</label>
+                  <input
+                    onChange={(e) => {
+                      addinfo(e);
+                    }}
+                    name="width"
+                    required={true}
+                  />{" "}
+                  <label>Cubic</label>
+                  <input
+                    onChange={(e) => {
+                      addinfo(e);
+                    }}
+                    name="cubic"
+                    required
+                  />
+                  <Button
+                    type="submit"
+                    variant="dark"
+                    style={{ marginTop: "10px" }}
+                  >
+                    Add data
+                  </Button>
+                </div>
+              </form>
+            </Col>
+          </Row>
+          <Table1 arr={mydata} deletefun={deletefun} />
+        </Container>
       )}
     </div>
   );

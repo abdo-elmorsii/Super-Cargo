@@ -36,26 +36,31 @@ const ServicesCom = () => {
                 />
               </div>
               <div>
-                <h1>20 Steel</h1>
+                <h1>{item.title}</h1>
                 <div className="container-details">
-                  <div>
-                    <span className="margininfo ">Cubic Capacity</span>
-                    <span className="margininfo power">{item.cubic}m</span>
+                  <div style={{ display: "flex" }}>
+                    <h6 className="margininfo " style={{ color: "#6c75a7" }}>Cubic Capacity</h6>
+                    <h6 className="margininfo power">{item.cubic}m</h6>
                   </div>
-                  <div>
-                    <span className="margininfo">Exterior</span>
-                    <span className="margininfo" style={{ color: "#6c75a7" }}>
-                      Length
-                    </span>
-                    <span className="margininfo">{item.length}m</span>
-                    <span className="margininfo" style={{ color: "#6c75a7" }}>
-                      Width
-                    </span>
-                    <span className="margininfo">{item.width}m</span>
-                    <span className="margininfo" style={{ color: "#6c75a7" }}>
-                      Height
-                    </span>
-                    <span className="margininfo">{item.height}m</span>
+                  <div className="con-info">
+                    <div>
+                      <span className="margininfo" style={{ color: "#6c75a7" }}>
+                        Length
+                      </span>
+                      <span className="margininfo">{item.length}m</span>
+                    </div>
+                    <div>
+                      <span className="margininfo" style={{ color: "#6c75a7" }}>
+                        Width
+                      </span>
+                      <span className="margininfo">{item.width}m</span>
+                    </div>
+                    <div>
+                      <span className="margininfo" style={{ color: "#6c75a7" }}>
+                        Height
+                      </span>
+                      <span className="margininfo">{item.height}m</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -63,7 +68,7 @@ const ServicesCom = () => {
           );
         })
       ) : (
-        <h1 style={{textAlign:"center"}}>Loading...</h1>
+        <h1 style={{ textAlign: "center" }}>Loading...</h1>
       )}
     </div>
   );
