@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Footer from "./Footer";
 import NavBar from "./NavBar";
 import { AiOutlineArrowUp } from "react-icons/ai";
+import { useRouter } from "next/router";
 const Layout = ({ children }) => {
   const [arrow, setarrow] = useState(false);
   useEffect(() => {
@@ -11,27 +12,25 @@ const Layout = ({ children }) => {
       } else setarrow(false);
     });
   });
+  const router = useRouter();
   const func = () => {
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: 'auto'
+      behavior: "auto",
     });
   };
   return (
     <div
       style={{
         minHeight: "100vh",
-        border: "1px solid green",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
         position: "relative",
       }}
     >
-      <div>
-        <NavBar />
-      </div>
+      <div>{<NavBar />}</div>
       {children}
       {arrow && (
         <button

@@ -5,27 +5,21 @@ import {
   signOut,
   createUserWithEmailAndPassword,
 } from "firebase/auth";
+import Router, { useRouter } from "next/router";
 import { mcontext } from "@/context/context";
 import { auth } from "@/firebase/firebase";
 const Login = () => {
   const [email, setemail] = useState();
   const [password, setpassword] = useState();
   const { id, setuser, user } = useContext(mcontext);
+  const router = useRouter();
 
-  const out = () => {
-    signOut(auth)
-      .then(() => {
-        // Sign-out successful.
-      })
-      .catch((error) => {
-        setuser(null);
-      });
-  };
   const handlefun = (e) => {
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, password)
       .then((user) => {
         setuser(user);
+        Router.push("/admin")
       })
       .catch((err) => console.log(err));
   };
@@ -52,9 +46,6 @@ const Login = () => {
           </div>
           <button type="submit" className="btn btn-outline-dark mb-4">
             Login
-          </button>
-          <button type="button" className="btn btn-outline-dark" onClick={out}>
-            signout
           </button>
         </form>
       </div>
