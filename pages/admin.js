@@ -25,6 +25,7 @@ const Admin = () => {
   const [upload, setuploadimage] = useState(null);
   const [mydata, setmydata] = useState([]);
   const [myimage, setimage] = useState("");
+  const Router = useRouter();
   const { setuser, user } = useContext(mcontext);
   const [data, setdata] = useState({
     height: "",
@@ -101,6 +102,7 @@ const Admin = () => {
   }, []);
   // console.log(mydata);
 
+  
   useEffect(() => {
     onAuthStateChanged(auth, (user1) => {
       if (user1) {
@@ -108,7 +110,6 @@ const Admin = () => {
       } else Router.push("login");
     });
   }, [Router, setuser]);
-  const Router = useRouter();
   const out = () => {
     signOut(auth)
       .then(() => {
