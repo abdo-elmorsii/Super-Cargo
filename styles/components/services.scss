@@ -9,6 +9,7 @@
   min-height: 130px;
   margin-bottom: 20px;
   border: 1px solid #2e3889;
+  padding: 10px;
   &:hover{
     background-color: #f8f8f8;
     cursor: pointer;
@@ -18,7 +19,7 @@
   overflow: hidden;
 }
 .margininfo {
-  margin-right: 50px;
+  margin-right: 30px;
   margin-bottom: 10px;
 }
 .power {
@@ -29,7 +30,16 @@
   width: fit-content;
   height: fit-content;
   content: "3";
-  top: -8px;
+  top: -5px;
   right: -7px;
   font-size: 14px;
+}
+.con-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+@media only screen and (max-width:700px) {
+    .services-container {
+        width: 90%;
+      }
 }
