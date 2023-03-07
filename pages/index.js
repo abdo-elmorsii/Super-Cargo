@@ -74,7 +74,7 @@ export default function Home() {
         <h4
           style={{ textAlign: "center", marginTop: "20px", color: "#51CFED " }}
         >
-          Testominal
+          Testimonial
         </h4>
 
         <h1 style={{ textAlign: "center", marginTop: "20px" }}>

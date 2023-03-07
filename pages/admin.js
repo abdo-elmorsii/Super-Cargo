@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from "react";
 import { useContext } from "react";
 import { mcontext } from "@/context/context";
@@ -86,7 +87,7 @@ const Admin = () => {
       setmydata([...dataarr]);
       console.log(mydata);
     });
-  }, []);
+  }, [mydata]);
 
   useEffect(() => {
     onAuthStateChanged(auth, (user1) => {
@@ -94,7 +95,7 @@ const Admin = () => {
         setuser(user1);
       } else Router.push("login");
     });
-  }, []);
+  }, [Router, setuser]);
   const Router = useRouter();
   const out = () => {
     signOut(auth)
@@ -121,7 +122,7 @@ const Admin = () => {
               </div>
             );
           })} */}
-          <img src={upload} />
+          <img src={upload}  alt="user"/>
           <form onSubmit={createdata}>
             <input
               type="file"
