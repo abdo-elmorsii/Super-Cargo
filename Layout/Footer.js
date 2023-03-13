@@ -5,6 +5,7 @@ import React from "react";
 import { Col, Row } from "react-bootstrap";
 import { MdLocationOn } from "react-icons/md";
 import { BsFillTelephoneFill } from "react-icons/bs";
+import { ImWhatsapp } from "react-icons/im";
 import { FiMail } from "react-icons/fi";
 import { TfiWorld } from "react-icons/tfi";
 import { MdPrint } from "react-icons/md";
@@ -26,6 +27,13 @@ const Footer = () => {
               <BsFillTelephoneFill />
               &nbsp;
               <span>02236976444</span>
+            </div>
+            <div>
+              <ImWhatsapp />
+              &nbsp;
+              <a href="https://api.whatsapp.com/send?phone=01159889937&text=Hello this is the starting message"  style={{textDecoration:"none"}}>
+                01159889937
+              </a>
             </div>
             <div>
               <FiMail />

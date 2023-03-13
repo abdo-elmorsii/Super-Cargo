@@ -6,7 +6,7 @@ import Head from "next/head";
 import { Inter } from "@next/font/google";
 import SimpleSlider from "@/components/Slider";
 import { Container } from "react-bootstrap";
-import {RiShip2Fill} from 'react-icons/ri'
+import { RiShip2Fill } from "react-icons/ri";
 import { BiWorld } from "react-icons/bi";
 import { FaUsers } from "react-icons/fa";
 import { GiShipBow } from "react-icons/gi";
@@ -47,7 +47,7 @@ export default function Home() {
             para="We've got your ocean freight needs covered! With a wide array of equipment types and consolidation services, your cargo will be delivered to its destination on time and at a low cost. Plus, we've got space protection planned out from all major container ports worldwide for ultimate reliability."
           />
           <CardInfo
-            image="../assets/train.jpg"
+            image="../assets/carlarge.jpg"
             title="Road Freight"
             className
             para="Experience top-notch road transportation with our Road Freight Products, offering a wide range of services including LTL (Less-than-Truck Load), PTL (Part), and FTL (Full-Truck Load) shipments. Our temperature-controlled and highly secured transports ensure your cargo is in safe hands."
@@ -73,11 +73,6 @@ export default function Home() {
         <h1 style={{ textAlign: "center", marginTop: "20px" }}>
           Pefrect Pricing Plane
         </h1>
-        <div className="container cards-flex">
-          <PriceDetails title="Basic Plane" price="$ 49.00" />
-          <PriceDetails title="Basic Plane" price="$ 49.00" />
-          <PriceDetails title="Basic Plane" price="$ 49.00" />
-        </div>
 
         <h4
           style={{ textAlign: "center", marginTop: "20px", color: "#51CFED " }}
@@ -101,24 +96,24 @@ export default function Home() {
             <h6>ABOUT US</h6>
             <h3>Quick Transport and Logistics Solutions</h3>
             <p>
-              Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
-              diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet
-              lorem sit clita duo justo magna dolore erat amet
+              We take pride in our ability to cater our services to meet your
+              specific needs, you’re always in good hands with our team
             </p>
             <div className="text-icon">
               <div>
                 <BiWorld fontSize={55} color={"#2F3988"} />
                 <h5>Global Coverage</h5>
                 <p>
-                Seamlessly connect your business to the world with our reliable global logistics solutions.
+                  Seamlessly connect your business to the world with our
+                  reliable global logistics solutions.
                 </p>
               </div>
               <div>
                 <GiShipBow fontSize={55} color={"#2F3988"} />
                 <h5>On Time Delivery</h5>
                 <p>
-                  Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam
-                  lorem diam justo.
+                  Delivering on-time, every time, because your success is our
+                  priority..
                 </p>
               </div>
             </div>
@@ -141,15 +136,15 @@ export default function Home() {
             <p>
               Navigate the seas of global commerce with ease - trust us to be
               your #1 port of call for managing all your shipments, anywhere in
-              the world
+              the world.
             </p>
 
             <div>
               <RiCustomerService2Fill fontSize={55} color={"#2F3988"} />
               <h5>Global Coverage</h5>
               <p>
-                Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem
-                diam justo.
+              Seamlessly connect your business to the world with our reliable global logistics solutions.
+
               </p>
             </div>
           </div>
