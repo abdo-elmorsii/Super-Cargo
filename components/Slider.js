@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
 import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -26,8 +27,31 @@ export default function SimpleSlider() {
               Solutions
             </h1>
             <div className="More-Info">
-              <button className="Read">Read More</button>
-              <button className="Free">Free Quote</button>
+              <button className="Read">
+                {" "}
+                <Link
+                  href="/services"
+                  style={{
+                    textDecoration: "none",
+                    color: "white",
+                    padding: "15px",
+                  }}
+                >
+                  Read More
+                </Link>
+              </button>
+              <button className="Free">
+                <Link
+                  href="/contact"
+                  style={{
+                    textDecoration: "none",
+                    padding: "11px",
+                    color: "black",
+                  }}
+                >
+                  Contact Us
+                </Link>
+              </button>
             </div>
           </div>
         </div>
@@ -36,11 +60,34 @@ export default function SimpleSlider() {
           <div className="words">
             <h3></h3>
             <h1 className="words-size">
-              #Place For Your <span style={{color:"blue"}}>Logistics</span> Solutions
+              #Place For Your <span style={{ color: "blue" }}>Logistics</span>{" "}
+              Solutions
             </h1>
             <div className="More-Info">
-              <button className="Read">Read More</button>
-              <button className="Free">Free Quote</button>
+              <button className="Read">
+                <Link
+                  href="/services"
+                  style={{
+                    textDecoration: "none",
+                    padding: "15px",
+                    color: "white",
+                  }}
+                >
+                  Read More
+                </Link>
+              </button>
+              <button className="Free">
+                <Link
+                  href="/contact"
+                  style={{
+                    textDecoration: "none",
+                    padding: "11px",
+                    color: "black",
+                  }}
+                >
+                  Contact Us
+                </Link>
+              </button>
             </div>
           </div>
         </div>

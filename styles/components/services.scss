@@ -6,7 +6,7 @@
 
 .service-item-con {
   width: 100%;
-  min-height: 130px;
+  min-height: 180px;
   margin-bottom: 20px;
   border: 1px solid #2e3889;
   padding: 10px;
@@ -14,7 +14,7 @@
     background-color: #f8f8f8;
     cursor: pointer;
   }
-  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  box-shadow: 5px 5px 10px #2e3889;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -42,4 +42,10 @@
     .services-container {
         width: 90%;
       }
+}
+@media only screen and (max-width:400px) {
+  .margininfo {
+    margin-right: 6px;
+    margin-bottom: 10px;
+  }
 }

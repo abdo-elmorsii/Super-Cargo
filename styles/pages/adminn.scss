@@ -4,3 +4,14 @@
   margin: auto;
 }
 
+.uploadedimage{
+  display: flex;
+  width: 100%;
+  object-fit: contain;
+  justify-content: center;
+  margin: 10px 0;
+  img{
+    width: 200px;
+    object-fit: contain;
+  }
+}
