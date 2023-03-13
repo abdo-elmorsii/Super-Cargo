@@ -72,7 +72,12 @@ const NavBar = () => {
                 Contact
               </Link>
             </li>
-           
+            <li>
+              <a>0236976444</a>
+            </li>
+            <li>
+              <a>01159889937</a>
+            </li>
           </ul>
         </Nav>
       </Navbar>
@@ -113,7 +118,10 @@ const NavBar = () => {
             </Link>
           </li>
           <li>
-            <p>0494875757</p>
+            <a>0236976444</a>
+          </li>
+          <li>
+            <a>01159889937</a>
           </li>
         </ul>
       </div>

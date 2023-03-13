@@ -24,23 +24,24 @@ const About = () => {
           <h6>ABOUT US</h6>
           <h3>Quick Transport and Logistics Solutions</h3>
           <p>
-          We take pride in our ability to cater our services to meet your specific needs, you’re always in good hands with our team.
+            We take pride in our ability to cater our services to meet your
+            specific needs, you’re always in good hands with our team.
           </p>
           <div className="text-icon">
             <div>
               <BiWorld fontSize={55} color={"#2F3988"} />
               <h5>Global Coverage</h5>
               <p>
-                Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem
-                diam justo.
+                Seamlessly connect your business to the world with our reliable
+                global logistics solutions.
               </p>
             </div>
             <div>
               <GiShipBow fontSize={55} color={"#2F3988"} />
               <h5>On Time Delivery</h5>
               <p>
-                Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem
-                diam justo.
+                Delivering on-time, every time, because your success is our
+                priority.
               </p>
             </div>
           </div>
@@ -61,17 +62,17 @@ const About = () => {
           <h6>SOME FACTS</h6>
           <h3>#1 Place To Manage All Of Your Shipments</h3>
           <p>
-            Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
-            diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet
-            lorem sit clita duo justo magna dolore erat amet
+            Navigate the seas of global commerce with ease - trust us to be your
+            #1 port of call for managing all your shipments, anywhere in the
+            world.{" "}
           </p>
 
           <div>
             <RiCustomerService2Fill fontSize={55} color={"#2F3988"} />
             <h5>Global Coverage</h5>
             <p>
-              Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem
-              diam justo.
+              Seamlessly connect your business to the world with our reliable
+              global logistics solutions.
             </p>
           </div>
         </div>
@@ -102,7 +103,10 @@ const About = () => {
       <Container className="third-section">
         <div className="text-box">
           <h6>OUR FEATURES</h6>
-          <h3>We Are Trusted Logistics Company Since 1990</h3>
+          <h3>
+            Unlock the Advantage of Easier, Quicker Transportation Services
+            Today.
+          </h3>
 
           <div className="text-icon">
             <div className="icon">
@@ -110,8 +114,8 @@ const About = () => {
               <div>
                 <h5>Worldwide Service</h5>
                 <p>
-                  Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam
-                  lorem diam justo.
+                  From doorstep to destination, we deliver worldwide excellence
+                  in logistics services
                 </p>
               </div>
             </div>
@@ -120,8 +124,7 @@ const About = () => {
               <div>
                 <h5>On Time Delivery</h5>
                 <p>
-                  Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam
-                  lorem diam justo.
+                Trust us to deliver on our promise - on-time, every time.
                 </p>
               </div>
             </div>
@@ -130,8 +133,7 @@ const About = () => {
               <div>
                 <h5>24/7 Telephone Support</h5>
                 <p>
-                  Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam
-                  lorem diam justo.
+                Our 24/7 telephone support is always available to keep your business moving forward.
                 </p>
               </div>
             </div>
