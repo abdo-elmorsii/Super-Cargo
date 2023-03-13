@@ -57,7 +57,6 @@ export default function Home() {
             title="Rail Freight"
             para="Our Rail Freight products offer secure, reliable and environmentally friendly freight transportation via rail"
           />
-          <CardInfo image="../assets/largeship.jpg" title="read" className />
           <CardInfo
             image="../assets/clearnes.jpg"
             title="Custom Clearance"

@@ -56,16 +56,24 @@ const Footer = () => {
                 Some Quick Links
               </li>
               <li>
-                <Link href="/" className="link">Home</Link>
+                <Link href="/" className="link">
+                  Home
+                </Link>
               </li>
               <li>
-                <Link href="/about" className="link">About</Link>
+                <Link href="/about" className="link">
+                  About
+                </Link>
               </li>
               <li>
-                <Link href="/services" className="link">Services</Link>
+                <Link href="/services" className="link">
+                  Services
+                </Link>
               </li>
               <li>
-                <Link href="/contact" className="link">Contact</Link>
+                <Link href="/contact" className="link">
+                  Contact
+                </Link>
               </li>
             </ul>
           </div>
@@ -73,7 +81,7 @@ const Footer = () => {
         <hr className="line" />
         <Col className="mapp col-height" sm={12} md={6} lg={4}>
           <div className="map">
-          <iframe
+            <iframe
               className="map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d221268.09520959307!2d30.595484339089378!3d29.941645880624055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145855e126df199d%3A0x24a6cf9d2fda5678!2s6th%20of%20October%20City%2C%20Giza%20Governorate!5e0!3m2!1sen!2seg!4v1677500467881!5m2!1sen!2seg"
               width="100%"
