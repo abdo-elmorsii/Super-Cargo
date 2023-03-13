@@ -102,7 +102,6 @@ const Admin = () => {
   }, []);
   // console.log(mydata);
 
-  
   useEffect(() => {
     onAuthStateChanged(auth, (user1) => {
       if (user1) {
@@ -136,10 +135,14 @@ const Admin = () => {
               </div>
             );
           })} */}
-          <img src={upload} alt="upload" />
+          {myimage && (
+            <div className="uploadedimage">
+              <img src={upload} alt="upload" />
+            </div>
+          )}
           <Row>
             <Col sm={8} lg={4} md={6} style={{ margin: "auto" }} xs={8}>
-              {" "}
+              
               <form onSubmit={createdata}>
                 <div className="formdataa">
                   <input

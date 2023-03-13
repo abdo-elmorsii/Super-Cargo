@@ -24,9 +24,7 @@ const About = () => {
           <h6>ABOUT US</h6>
           <h3>Quick Transport and Logistics Solutions</h3>
           <p>
-            Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
-            diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet
-            lorem sit clita duo justo magna dolore erat amet
+          We take pride in our ability to cater our services to meet your specific needs, you’re always in good hands with our team.
           </p>
           <div className="text-icon">
             <div>
@@ -81,7 +79,7 @@ const About = () => {
           <Card
             bgColor={"#2F3988"}
             icon={<FaUsers color="#fff" fontSize={30} />}
-            number={"1200"}
+            number={"1000+"}
             title={"Happy Users"}
           />
           <div>
@@ -94,8 +92,8 @@ const About = () => {
             <Card
               bgColor={"#51CFED"}
               icon={<FaUsers color="#fff" fontSize={30} />}
-              number={"1200"}
-              title={"Happy Users"}
+              number={"20+"}
+              title={"Shipping to 20+ Country"}
             />
           </div>
         </div>

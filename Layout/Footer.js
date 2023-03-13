@@ -73,10 +73,12 @@ const Footer = () => {
         <hr className="line" />
         <Col className="mapp col-height" sm={12} md={6} lg={4}>
           <div className="map">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3455.8375027154225!2d31.31748099152631!3d29.984099657756257!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x35b0bda415fdbe15!2sCarrefour%20-%20Maadi%20City%20Center!5e0!3m2!1sen!2seg!4v1672652261910!5m2!1sen!2seg"
-              width={"100%"}
+          <iframe
+              className="map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d221268.09520959307!2d30.595484339089378!3d29.941645880624055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145855e126df199d%3A0x24a6cf9d2fda5678!2s6th%20of%20October%20City%2C%20Giza%20Governorate!5e0!3m2!1sen!2seg!4v1677500467881!5m2!1sen!2seg"
+              width="100%"
               height="200"
+              style={{ border: 0, borderRadius: "8px" }}
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

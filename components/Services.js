@@ -31,7 +31,7 @@ const ServicesCom = () => {
               <div style={{ marginRight: "30px" }}>
                 <img
                   src={item.img}
-                  style={{ objectFit: "contain", width: "150px" }}
+                  style={{ objectFit: "contain", width: "90px" }}
                   alt="contant"
                 />
               </div>

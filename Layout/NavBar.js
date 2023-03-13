@@ -72,9 +72,7 @@ const NavBar = () => {
                 Contact
               </Link>
             </li>
-            <li>
-              <p>0494875757</p>
-            </li>
+           
           </ul>
         </Nav>
       </Navbar>
