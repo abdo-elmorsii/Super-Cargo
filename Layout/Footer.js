@@ -26,13 +26,13 @@ const Footer = () => {
             <div>
               <BsFillTelephoneFill />
               &nbsp;
-              <span>02236976444</span>
+              <span>0236976444</span>
             </div>
             <div>
               <ImWhatsapp />
               &nbsp;
               <a href="https://api.whatsapp.com/send?phone=01159889937&text=Hello this is the starting message"  style={{textDecoration:"none"}}>
-                01159889937
+               (+20) 01159889937
               </a>
             </div>
             <div>
