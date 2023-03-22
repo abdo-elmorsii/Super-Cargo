@@ -1,14 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from "react";
-import {
-  query,
-  collection,
-  onSnapshot,
-  
-} from "firebase/firestore";
+import { query, collection, onSnapshot } from "firebase/firestore";
 // import { auth } from "@/firebase/firebase";
 import { db } from "@/firebase/firebase";
-
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 const ServicesCom = () => {
   const [mydata, setmydata] = useState([]);
   useEffect(() => {
@@ -27,7 +23,10 @@ const ServicesCom = () => {
       {mydata.length > 0 ? (
         mydata.map((item, index) => {
           return (
-            <div className="service-item-con d-flex align-items-center" key={index}>
+            <div
+              className="service-item-con d-flex align-items-center"
+              key={index}
+            >
               <div style={{ marginRight: "30px" }}>
                 <img
                   src={item.img}
@@ -39,7 +38,9 @@ const ServicesCom = () => {
                 <h1>{item.title}</h1>
                 <div className="container-details">
                   <div style={{ display: "flex" }}>
-                    <h6 className="margininfo " style={{ color: "#6c75a7" }}>Cubic Capacity</h6>
+                    <h6 className="margininfo " style={{ color: "#6c75a7" }}>
+                      Cubic Capacity
+                    </h6>
                     <h6 className="margininfo power">{item.cubic}m</h6>
                   </div>
                   <div className="con-info">
@@ -68,7 +69,20 @@ const ServicesCom = () => {
           );
         })
       ) : (
-        <h1 style={{ textAlign: "center" }}>Loading...</h1>
+        <div>
+          <div style={{ marginBottom: "20px" }}>
+            <Skeleton count={4} />
+          </div>
+          <div style={{ marginBottom: "20px" }}>
+            <Skeleton count={4} />
+          </div>
+          <div style={{ marginBottom: "20px" }}>
+            <Skeleton count={4} />
+          </div>
+          <div style={{ marginBottom: "20px" }}>
+            <Skeleton count={4} />
+          </div>
+        </div>
       )}
     </div>
   );
