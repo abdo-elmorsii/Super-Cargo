@@ -2,6 +2,7 @@
 import Button from "@/components/Button";
 import Card from "@/components/Card";
 import CardTwo from "@/components/CardTwo";
+import HeadTitle from "@/components/Head";
 import ImageComp from "@/components/ImageComp";
 import React from "react";
 import { Container } from "react-bootstrap";
@@ -13,6 +14,7 @@ import { RiCustomerService2Fill } from "react-icons/ri";
 const About = () => {
   return (
     <section className="About-page">
+      <HeadTitle title="About"/>
       <ImageComp title={"About US"} />
       {/* first container */}
       <Container className="about-us ">

@@ -1,4 +1,5 @@
 import Button from "@/components/Button";
+import HeadTitle from "@/components/Head";
 import ImageComp from "@/components/ImageComp";
 import React from "react";
 import { Col, Container, Form, Row } from "react-bootstrap";
@@ -6,6 +7,7 @@ import { Col, Container, Form, Row } from "react-bootstrap";
 const Contact = () => {
   return (
     <section>
+      <HeadTitle title="Contact"/>
       <ImageComp title={"Contact US"} />
       <Container className="mt-5">
         <Row>
