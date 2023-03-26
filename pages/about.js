@@ -4,6 +4,7 @@ import Card from "@/components/Card";
 import CardTwo from "@/components/CardTwo";
 import HeadTitle from "@/components/Head";
 import ImageComp from "@/components/ImageComp";
+import Head from "next/head";
 import React from "react";
 import { Container } from "react-bootstrap";
 import { BiWorld } from "react-icons/bi";
@@ -14,7 +15,12 @@ import { RiCustomerService2Fill } from "react-icons/ri";
 const About = () => {
   return (
     <section className="About-page">
-      <HeadTitle title="About"/>
+      <Head>
+        <title> Super Cargo | About</title>
+        <meta name="description" content="Super Cargo" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="shortcut icon" href="supercargo.png" />
+      </Head>
       <ImageComp title={"About US"} />
       {/* first container */}
       <Container className="about-us ">
@@ -125,9 +131,7 @@ const About = () => {
               <GiShipBow fontSize={55} color={"#2F3988"} />
               <div>
                 <h5>On Time Delivery</h5>
-                <p>
-                Trust us to deliver on our promise - on-time, every time.
-                </p>
+                <p>Trust us to deliver on our promise - on-time, every time.</p>
               </div>
             </div>
             <div className="icon">
@@ -135,7 +139,8 @@ const About = () => {
               <div>
                 <h5>24/7 Telephone Support</h5>
                 <p>
-                Our 24/7 telephone support is always available to keep your business moving forward.
+                  Our 24/7 telephone support is always available to keep your
+                  business moving forward.
                 </p>
               </div>
             </div>

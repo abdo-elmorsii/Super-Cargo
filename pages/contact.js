@@ -1,14 +1,20 @@
 import Button from "@/components/Button";
 import HeadTitle from "@/components/Head";
 import ImageComp from "@/components/ImageComp";
+import Head from "next/head";
 import React from "react";
 import { Col, Container, Form, Row } from "react-bootstrap";
 
 const Contact = () => {
   return (
     <section>
-      <HeadTitle title="Contact"/>
-      <ImageComp title={"Contact US"} />
+      
+      <Head>
+        <title> Super Cargo | Contact</title>
+        <meta name="description" content="Super Cargo" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="shortcut icon" href="supercargo.png" />
+      </Head>
       <Container className="mt-5">
         <Row>
           <Col md="5" className="mb-3">

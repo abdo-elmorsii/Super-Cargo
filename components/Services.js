@@ -71,16 +71,16 @@ const ServicesCom = () => {
       ) : (
         <div>
           <div style={{ marginBottom: "20px" }}>
-            <Skeleton count={4} />
+            <Skeleton  style={{height:"15vh"}} />
           </div>
           <div style={{ marginBottom: "20px" }}>
-            <Skeleton count={4} />
+            <Skeleton  style={{height:"15vh"}} />
           </div>
           <div style={{ marginBottom: "20px" }}>
-            <Skeleton count={4} />
+            <Skeleton  style={{height:"15vh"}} />
           </div>
           <div style={{ marginBottom: "20px" }}>
-            <Skeleton count={4} />
+            <Skeleton  style={{height:"15vh"}} />
           </div>
         </div>
       )}
