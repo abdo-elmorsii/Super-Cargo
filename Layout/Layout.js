@@ -3,11 +3,13 @@ import Footer from "./Footer";
 import NavBar from "./NavBar";
 import { AiOutlineArrowUp } from "react-icons/ai";
 import { useRouter } from "next/router";
+import Head from "next/head";
+
 const Layout = ({ children }) => {
   const [arrow, setarrow] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (pageYOffset > 1000) {
+      if (pageYOffset > 2600) {
         setarrow(true);
       } else setarrow(false);
     });
@@ -20,6 +22,7 @@ const Layout = ({ children }) => {
       behavior: "auto",
     });
   };
+
   return (
     <div
       style={{
