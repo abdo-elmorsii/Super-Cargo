@@ -1,12 +1,18 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { query, collection, onSnapshot } from "firebase/firestore";
 // import { auth } from "@/firebase/firebase";
 import { db } from "@/firebase/firebase";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import { useRouter } from "next/router";
+import { mcontext } from "@/context/context";
 const ServicesCom = () => {
   const [mydata, setmydata] = useState([]);
+  const { user } = useContext(mcontext);
+  const router = useRouter();
+
+  console.log(user);
   useEffect(() => {
     const q = query(collection(db, "data"));
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
@@ -17,9 +23,18 @@ const ServicesCom = () => {
       setmydata([...dataarr]);
       console.log(mydata);
     });
-  }, [mydata]);
+  }, []);
   return (
     <div className="services-container">
+      <button
+        onClick={() => {
+          router.push("/admin")
+        }}
+        className="btn btn-dark"
+        style={{fontSize:"20px",marginBottom:"30px"}}
+      >
+        Admin Page
+      </button>
       {mydata.length > 0 ? (
         mydata.map((item, index) => {
           return (
@@ -71,16 +86,16 @@ const ServicesCom = () => {
       ) : (
         <div>
           <div style={{ marginBottom: "20px" }}>
-            <Skeleton  style={{height:"15vh"}} />
+            <Skeleton style={{ height: "15vh" }} />
           </div>
           <div style={{ marginBottom: "20px" }}>
-            <Skeleton  style={{height:"15vh"}} />
+            <Skeleton style={{ height: "15vh" }} />
           </div>
           <div style={{ marginBottom: "20px" }}>
-            <Skeleton  style={{height:"15vh"}} />
+            <Skeleton style={{ height: "15vh" }} />
           </div>
           <div style={{ marginBottom: "20px" }}>
-            <Skeleton  style={{height:"15vh"}} />
+            <Skeleton style={{ height: "15vh" }} />
           </div>
         </div>
       )}

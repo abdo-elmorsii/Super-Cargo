@@ -6,15 +6,15 @@
 
 .service-item-con {
   width: 100%;
-  min-height: 180px;
+  min-height: 200px;
   margin-bottom: 20px;
-  border: 1px solid #2e3889;
+  border: 4px solid #2e3889;
   padding: 10px;
   &:hover{
     background-color: #f8f8f8;
     cursor: pointer;
   }
-  box-shadow: 5px 5px 10px #2e3889;
+  box-shadow: 2px 2px 3px #2e3889;
   border-radius: 10px;
   overflow: hidden;
 }
