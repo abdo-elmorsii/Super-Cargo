@@ -21,6 +21,7 @@ import {
 
 import Table1 from "@/components/Table";
 import { Button, Col, Container, Row } from "react-bootstrap";
+import Link from "next/link";
 const Admin = () => {
   const [upload, setuploadimage] = useState(null);
   const [mydata, setmydata] = useState([]);
@@ -106,7 +107,9 @@ const Admin = () => {
     onAuthStateChanged(auth, (user1) => {
       if (user1) {
         setuser(user1);
-      } else Router.push("login");
+      } else {
+        Router.push("/login");
+      }
     });
   }, [Router, setuser]);
   const out = () => {
@@ -121,13 +124,16 @@ const Admin = () => {
   return (
     <div>
       {!user ? (
-        "Loading"
+        ""
       ) : (
         <Container style={{ marginTop: "20px" }}>
           <h2 style={{ textAlign: "center" }}>Admin Page</h2>
           <button type="button" className="btn btn-outline-dark" onClick={out}>
-            signout
+            Signout
           </button>
+          <Link className="btn btn-outline-dark" style={{marginLeft:"10px"}} href="/"> 
+            Home
+          </Link>
           {/* {myimages.map((item) => {
             return (
               <div>
@@ -142,7 +148,6 @@ const Admin = () => {
           )}
           <Row>
             <Col sm={8} lg={4} md={6} style={{ margin: "auto" }} xs={8}>
-              
               <form onSubmit={createdata}>
                 <div className="formdataa">
                   <input
