@@ -11,21 +11,19 @@ const Login = () => {
   const [password, setpassword] = useState();
   const { setuser } = useContext(mcontext);
   const router = useRouter();
-
+  const [loading, setloading] = useState(false);
   const handlefun = (e) => {
     e.preventDefault();
+    setloading(true);
     signInWithEmailAndPassword(auth, email, password)
       .then((user) => {
-        if (!user) {
-          console.log("abdo");
-        }
         setuser(user);
         router.push("/admin");
+        setloading(false)
       })
       .catch((error) => {
-        const errorCode = error.code;
         const errorMessage = error.message;
-        console.log(errorMessage);
+        setloading(false)
         toast.error(errorMessage);
       });
   };
@@ -57,7 +55,7 @@ const Login = () => {
               />
             </div>
             <button type="submit" className="btn" style={{ background: "#2e398b", color: "white" }}>
-              Login
+              {loading ? "Loading..." : "Login"}
             </button>
           </form>
         </div>
