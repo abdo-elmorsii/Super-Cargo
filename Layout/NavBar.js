@@ -14,7 +14,7 @@ const NavBar = () => {
   return (
     <header
       className="header"
-      style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 99999 }}
+      style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 999 }}
     >
       <Navbar
         bg="light"
@@ -76,7 +76,9 @@ const NavBar = () => {
               <a>0236976444</a>
             </li>
             <li>
-              <a>(+2) 01159889937</a>
+              <a href="https://api.whatsapp.com/send?phone=01159889937&text=Hello" style={{ textDecoration: "none" }}>
+                (+2) 01159889937
+              </a>
             </li>
           </ul>
         </Nav>
@@ -121,7 +123,9 @@ const NavBar = () => {
             <a>0236976444</a>
           </li>
           <li>
-            <a>(+2) 01159889937</a>
+            <a href="https://api.whatsapp.com/send?phone=01159889937&text=Hello" style={{ textDecoration: "none" }}>
+              (+2) 01159889937
+            </a>
           </li>
         </ul>
       </div>

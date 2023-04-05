@@ -31,8 +31,8 @@ const Footer = () => {
             <div>
               <ImWhatsapp />
               &nbsp;
-              <a href="https://api.whatsapp.com/send?phone=01159889937&text=Hello this is the starting message"  style={{textDecoration:"none"}}>
-               (+2) 01159889937
+              <a href="https://api.whatsapp.com/send?phone=01159889937&text=Hello" style={{ textDecoration: "none" }}>
+                (+2) 01159889937
               </a>
             </div>
             <div>

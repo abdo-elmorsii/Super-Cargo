@@ -1,22 +1,54 @@
 import Button from "@/components/Button";
-import HeadTitle from "@/components/Head";
-import ImageComp from "@/components/ImageComp";
 import Head from "next/head";
-import React from "react";
+import React, { useRef, useState } from "react";
 import { Col, Container, Form, Row } from "react-bootstrap";
+import { toast } from "react-toastify";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
+  const formRef = useRef();
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    console.log(formRef.current);
+    console.log(formRef.current.name.value);
+    if (formRef.current.name.value && formRef.current["email"].value && formRef.current["mobile_number"].value && formRef.current["message"].value) {
+      emailjs
+        .sendForm(
+          "service_nz7l4ia",
+          "template_rrhre82",
+          formRef.current,
+          "qkkIA_wXuURWIt-O0"
+        )
+        .then((res) => {
+          toast.success("Your message has been sent.");
+          formRef.current.reset()
+          setLoading(false);
+        })
+        .catch((er) => {
+          toast.error(`${er.text}`);
+          setLoading(false);
+        });
+    } else {
+      toast.warning(`Please fill out all fields`);
+      setLoading(false);
+    }
+
+  };
+
   return (
     <section>
-      
+
       <Head>
         <title> Super Cargo | Contact</title>
         <meta name="description" content="Super Cargo" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="shortcut icon" href="supercargo.png" />
       </Head>
-      <Container className="mt-5">
-        <Row>
+      <Container className="mt-5 pt-5">
+        <Row className="mt-5">
           <Col md="5" className="mb-3">
             <div className="form-heading mb-3">
               <h3 className="text-info">Get in touch...</h3>
@@ -24,25 +56,27 @@ const Contact = () => {
                 for any question just contact us
               </span>
             </div>
-            <Form>
+            <Form ref={formRef}
+              onSubmit={handleSubmit}
+            >
               <Form.Group className="mb-3" controlId="name">
                 <Form.Label>Full name</Form.Label>
-                <Form.Control type="text" placeholder="name@example.com" />
+                <Form.Control name='name' type="text" placeholder="Enter your name." />
               </Form.Group>
               <Form.Group className="mb-3" controlId="email">
                 <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="name@example.com" />
+                <Form.Control name='email' type="email" placeholder="Enter your email." />
               </Form.Group>
               <Form.Group className="mb-3" controlId="mobile">
                 <Form.Label>Mobile number</Form.Label>
-                <Form.Control type="text" placeholder="+20123456789" />
+                <Form.Control name='mobile_number' type="text" placeholder="Enter your mobile." />
               </Form.Group>
               <Form.Group className="mb-3" controlId="message">
                 <Form.Label>Message</Form.Label>
-                <Form.Control
+                <Form.Control name='message'
                   as="textarea"
                   rows={7}
-                  placeholder="Your Massage"
+                  placeholder="Enter your massage."
                 />
               </Form.Group>
               <Button
@@ -52,8 +86,9 @@ const Contact = () => {
                 bg={"#2F3988"}
                 border={"none"}
                 className="btn-info my-3"
+                type={"submit"}
               >
-                Send message
+                {loading ? "Sending..." : "Send"}
               </Button>
             </Form>
           </Col>

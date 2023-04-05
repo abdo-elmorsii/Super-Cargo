@@ -5,6 +5,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { useRouter } from "next/router";
 import { mcontext } from "@/context/context";
 import { auth } from "@/firebase/firebase";
+import { toast } from "react-toastify";
 const Login = () => {
   const [email, setemail] = useState();
   const [password, setpassword] = useState();
@@ -15,10 +16,18 @@ const Login = () => {
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, password)
       .then((user) => {
+        if (!user) {
+          console.log("abdo");
+        }
         setuser(user);
         router.push("/admin");
       })
-      .catch((err) => console.log(err));
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorMessage);
+        toast.error(errorMessage);
+      });
   };
   return (
     <div className="login">
@@ -47,7 +56,7 @@ const Login = () => {
                 required
               />
             </div>
-            <button type="submit" className="btn" style={{background:"#2e398b",color:"white"}}>
+            <button type="submit" className="btn" style={{ background: "#2e398b", color: "white" }}>
               Login
             </button>
           </form>

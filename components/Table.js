@@ -45,10 +45,13 @@ function Table({ arr, deletefun }) {
       width: item.width,
       height: item.height,
       title: item.title,
-      id: item.id,  
+      id: item.id,
       delete: (
         <RiDeleteBin7Fill
-          style={{ cursor: "pointer" }}
+          style={{
+            cursor: "pointer",
+            fontSize: "20px"
+          }}
           onClick={() => {
             deletefun(item.id);
           }}
@@ -57,18 +60,9 @@ function Table({ arr, deletefun }) {
     };
   });
 
-  console.log(data);
 
   return (
     <div className="main">
-      {/* <DataTableExtensions
-        columns={columns}
-        data={data}
-        filter={true}
-        print={false}
-        export={false}
-      > */}
-      {console.log(data)}
       <DataTable
         columns={columns}
         data={data}
@@ -78,7 +72,6 @@ function Table({ arr, deletefun }) {
         pagination
         highlightOnHover
       />
-      {/* </DataTableExtensions> */}
     </div>
   );
 }

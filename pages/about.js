@@ -96,7 +96,7 @@ const About = () => {
               bgColor={"#198754"}
               icon={<FaUsers color="#fff" fontSize={30} />}
               number={"1200"}
-              title={"Happy Users"}
+              title={"Customers"}
             />
             <Card
               bgColor={"#51CFED"}
@@ -155,9 +155,9 @@ const About = () => {
         <h6>OUR TEAM</h6>
         <h2>Expert Team Members</h2>
         <div className="image-card">
-          <CardTwo image={"/team-1.jpg"} />
-          <CardTwo image={"/team-2.jpg"} />
-          <CardTwo image={"/team-3.jpg"} />
+          <CardTwo name={"Ahmed "} image={"/team-1.jpg"} />
+          <CardTwo name={"Mohamed "} image={"/team-2.jpg"} />
+          <CardTwo name={"Abrahim "} image={"/team-3.jpg"} />
         </div>
       </Container>
     </section>

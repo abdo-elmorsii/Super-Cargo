@@ -22,15 +22,15 @@ import HeadTitle from "@/components/Head";
 
 const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
- 
+
   return (
     <>
-    <Head>
-      <title> Super Cargo | Home</title>
-      <meta name="description" content="Super Cargo" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link rel="shortcut icon" href="supercargo.png" />
-    </Head>
+      <Head>
+        <title> Super Cargo | Home</title>
+        <meta name="description" content="Super Cargo" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="shortcut icon" href="supercargo.png" />
+      </Head>
       {/* <HeadTitle title="Home"/> */}
       <main className="home">
         {/* slider */}
@@ -146,7 +146,7 @@ export default function Home() {
               <RiCustomerService2Fill fontSize={55} color={"#2F3988"} />
               <h5>Global Coverage</h5>
               <p>
-              Seamlessly connect your business to the world with our reliable global logistics solutions.
+                Seamlessly connect your business to the world with our reliable global logistics solutions.
 
               </p>
             </div>
@@ -163,7 +163,7 @@ export default function Home() {
                 bgColor={"#198754"}
                 icon={<FaUsers color="#fff" fontSize={30} />}
                 number={"1200"}
-                title={"Happy Users"}
+                title={"Customers"}
               />
               <Card
                 bgColor={"#51CFED"}

@@ -13,12 +13,14 @@ const Button = ({
   fontSize,
   fontWeight,
   cl,
-  style
+  style,
+  ...props
 }) => {
   return (
     <button
       className={cl}
       onClick={onClick}
+      {...props}
       style={{
         backgroundColor: bg,
         border,
