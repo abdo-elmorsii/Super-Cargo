@@ -76,7 +76,7 @@ const NavBar = () => {
               <a>0236976444</a>
             </li>
             <li>
-              <a href="https://api.whatsapp.com/send?phone=01159889937&text=Hello" style={{ textDecoration: "none" }}>
+              <a href="https://api.whatsapp.com/send?phone=201159889937&text=Hello" style={{ textDecoration: "none" }}>
                 (+2) 01159889937
               </a>
             </li>
@@ -123,7 +123,7 @@ const NavBar = () => {
             <a>0236976444</a>
           </li>
           <li>
-            <a href="https://api.whatsapp.com/send?phone=01159889937&text=Hello" style={{ textDecoration: "none" }}>
+            <a href="https://api.whatsapp.com/send?phone=201159889937&text=Hello" style={{ textDecoration: "none" }}>
               (+2) 01159889937
             </a>
           </li>
