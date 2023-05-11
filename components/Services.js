@@ -14,27 +14,22 @@ const ServicesCom = () => {
 
   console.log(user);
   useEffect(() => {
-    const q = query(collection(db, "data"));
-    const unsubscribe = onSnapshot(q, (querySnapshot) => {
-      let dataarr = [];
-      querySnapshot.forEach((doc, index) => {
-        dataarr.push({ ...doc.data(), id: doc.id[index] });
+    try {
+      const q = query(collection(db, "data"));
+      const unsubscribe = onSnapshot(q, (querySnapshot) => {
+        let dataarr = [];
+        querySnapshot.forEach((doc, index) => {
+          dataarr.push({ ...doc.data(), id: doc.id[index] });
+        });
+        setmydata([...dataarr]);
+        console.log(mydata);
       });
-      setmydata([...dataarr]);
-      console.log(mydata);
-    });
+    } catch (error) {
+      console.log(error);
+    }
   }, []);
   return (
     <div className="services-container">
-      <button
-        onClick={() => {
-          router.push("/admin")
-        }}
-        className="btn btn-dark"
-        style={{fontSize:"20px",marginBottom:"30px"}}
-      >
-        Admin Page
-      </button>
       {mydata.length > 0 ? (
         mydata.map((item, index) => {
           return (

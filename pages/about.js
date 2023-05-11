@@ -93,12 +93,6 @@ const About = () => {
           />
           <div>
             <Card
-              bgColor={"#198754"}
-              icon={<FaUsers color="#fff" fontSize={30} />}
-              number={"1200"}
-              title={"Customers"}
-            />
-            <Card
               bgColor={"#51CFED"}
               icon={<FaUsers color="#fff" fontSize={30} />}
               number={"20+"}

@@ -77,7 +77,7 @@ export default function Home() {
           Pefrect Pricing Plane
         </h1>
 
-        <h4
+        {/* <h4
           style={{ textAlign: "center", marginTop: "20px", color: "#51CFED " }}
         >
           Testimonial
@@ -88,7 +88,7 @@ export default function Home() {
         </h1>
         <div className="container" style={{ marginTop: "30px" }}>
           <SliderPerson />
-        </div>
+        </div> */}
         {/* first container */}
         <Container className="about-us ">
           <div className="image-box">
@@ -159,12 +159,6 @@ export default function Home() {
               title={"Happy Users"}
             />
             <div>
-              <Card
-                bgColor={"#198754"}
-                icon={<FaUsers color="#fff" fontSize={30} />}
-                number={"1200"}
-                title={"Customers"}
-              />
               <Card
                 bgColor={"#51CFED"}
                 icon={<RiShip2Fill color="#fff" fontSize={30} />}

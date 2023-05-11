@@ -27,7 +27,7 @@ export default function SimpleSlider() {
               Solutions
             </h1>
             <div className="More-Info">
-              <button className="Read">
+              {/* <button className="Read">
                 {" "}
                 <Link
                   href="/services"
@@ -39,7 +39,7 @@ export default function SimpleSlider() {
                 >
                   Read More
                 </Link>
-              </button>
+              </button> */}
               <button className="Free">
                 <Link
                   href="/contact"
@@ -64,7 +64,7 @@ export default function SimpleSlider() {
               Solutions
             </h1>
             <div className="More-Info">
-              <button className="Read">
+              {/* <button className="Read">
                 <Link
                   href="/services"
                   style={{
@@ -75,7 +75,7 @@ export default function SimpleSlider() {
                 >
                   Read More
                 </Link>
-              </button>
+              </button> */}
               <button className="Free">
                 <Link
                   href="/contact"
